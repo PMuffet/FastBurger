@@ -9,7 +9,6 @@ public class FastBurger {
 	private double SodaPrice = 2.50;
 	private boolean FriesInTray;
 	private double AmountPaid;
-	private double TotalSales = 0;
 
 	Scanner console = new Scanner(System.in);
 
@@ -44,11 +43,11 @@ public class FastBurger {
 			break;
 		default:
 			System.err.println("Unrecognized option");
-			runApp();
+
 			// unrecognizedMenu();
 			break;
 		}
-
+		runApp();
 	}
 
 	// Main Menu Methods
@@ -88,11 +87,9 @@ public class FastBurger {
 			break;
 		case 4:
 			System.out.println("Return to Main Menu");
-			runApp();
 			break;
 		default:
 			System.err.println("Unrecognized option");
-			runApp();
 			// unrecognizedMenu
 			break;
 		}
@@ -103,7 +100,6 @@ public class FastBurger {
 		System.out.println("Current Burger Price is: " + BurgerPrice + "\nEnter New Price:");
 		setBurgerPrice(console.nextDouble());
 		System.out.println("New Burger Price is: " + BurgerPrice);
-		runApp();
 
 	}
 
@@ -111,14 +107,14 @@ public class FastBurger {
 		System.out.println("Current Fries Price is: " + FriesPrice + "\nEnter New Price:");
 		setFriesPrice(console.nextDouble());
 		System.out.println("New Fries Price is: " + FriesPrice);
-		runApp();
+
 	}
 
 	public void updateSodaPrice() {
 		System.out.println("Current Soda Price is: " + SodaPrice + "\nEnter New Price:");
 		setSodaPrice(console.nextDouble());
 		System.out.println("New Soda Price is: " + SodaPrice);
-		runApp();
+
 	}
 
 	// Accessors and Mutators
@@ -153,14 +149,6 @@ public class FastBurger {
 
 	public void setFriesInTray(boolean friesInTray) {
 		FriesInTray = friesInTray;
-	}
-
-	public double getTotalSales() {
-		return TotalSales;
-	}
-
-	public void setTotalSales(double totalSales) {
-		TotalSales = totalSales;
 	}
 
 }

@@ -4,8 +4,9 @@ import java.util.Scanner;
 
 public class Report {
 
+	private double TotalSales = 0;
+
 	Scanner console = new Scanner(System.in);
-	FastBurger FB1 = new FastBurger();
 
 	// Sales Report method - Uses value from FastBurger classes and prints it
 	// essentially
@@ -19,13 +20,11 @@ public class Report {
 		switch (console.nextInt()) {
 		case 1:
 			System.out.println("Generating Sales Report");
-			System.out.println("Total sales for today: $" + FB1.getTotalSales());
+			System.out.println("Total sales for today: $" + TotalSales);
 			System.out.println("Returning to Main Menu...");
-			FB1.runApp();
 			break;
 		case 2:
 			System.out.println("Returning to Main Menu...");
-			FB1.runApp();
 			break;
 
 		default:
@@ -35,6 +34,14 @@ public class Report {
 			break;
 		}
 
+	}
+
+	public double getTotalSales() {
+		return TotalSales;
+	}
+
+	public void setTotalSales(double totalSales) {
+		TotalSales = totalSales;
 	}
 
 }

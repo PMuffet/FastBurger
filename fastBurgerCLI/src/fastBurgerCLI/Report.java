@@ -4,11 +4,11 @@ import java.util.Scanner;
 
 public class Report {
 
-	private double TotalSales = 0;
+	private double totalSales = 0;
 
 	Scanner console = new Scanner(System.in);
 
-	// Sales Report method - Uses value from FastBurger classes and prints it
+	// Sales Report method - Uses value which is set by FastBurger class and prints it 
 	// essentially
 
 	public void generateSalesReport() {
@@ -20,7 +20,7 @@ public class Report {
 		switch (console.nextInt()) {
 		case 1:
 			System.out.println("Generating Sales Report");
-			System.out.println("Total sales for today: $" + TotalSales);
+			System.out.println("Total sales for today: $" + totalSales);
 			System.out.println("Returning to Main Menu...");
 			break;
 		case 2:
@@ -37,11 +37,11 @@ public class Report {
 	}
 
 	public double getTotalSales() {
-		return TotalSales;
+		return totalSales;
 	}
 
 	public void setTotalSales(double totalSales) {
-		TotalSales = totalSales;
+		this.totalSales = totalSales;
 	}
 
 }
